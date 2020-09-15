@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="=" utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <title> TestPage Accessibility</title>
+</head>
+
+<body>
+    <h1>Menu</h1>
+
+    <div>
+        <p>
+            This page has:
+        <ul>
+            <li> tabIndex=1+ for the Coke menu. It can be seen that tabIndex=1+ takes precedence starting with the index
+                from smallest to largest. </li>
+            <li> tabIndex=0 for a label that is a non focussable web element</li>
+        </ul>
+        </p>
+        <p>
+            Load this page and click tab to go through the menu.
+        <ul>
+
+            <li> The tab starts at the coke menu item that has tabIndex=1+.</li>
+            <li>Then starts at the top of the Curry menu. </li>
+            <li>Stewed Chicken Curry label can be tabbed to and has become focusable content.</li>
+        </ul>
+        </p>
+    </div>
+
+    <form action="">
+        <h2>Curry</h2>
+        <input type="checkbox" name="chickenkatsucurry" id="Curry1">
+        <label for="chickenkatsucurry">Chicken Katsu Curry</label><br>
+        <input type="checkbox" name="stewedchickencurry" id="Curry2">
+        <label for="stewedchickencurry" tabindex="0">Stewed Chicken Curry</label><br>
+        <input type="checkbox" name="japaneseBBQcurry" id="Curry3">
+        <label for="japaneseBBQcurry">Japanese BBQ Curry</label><br>
+        <input type="checkbox" name="friedchickencurry" id="Curry4">
+        <label for="friedchickencurry">Fried Chicken Curry</label>
+    </form>
+
+    <form action="">
+        <h2>Coke</h2>
+        <input type="checkbox" name="dietcoke" id="FizzyDrink1" tabindex="4">
+        <label for="dietcoke">Diet Coke</label><br>
+        <input type="checkbox" name="cokezero" id="FizzyDrink2" tabindex="3">
+        <label for="cokezero">Coke Zero</label><br>
+        <input type="checkbox" name="cherrycoke" id="FizzyDrink3" tabindex="2">
+        <label for="cherrycoke">Cherry Coke</label><br>
+        <input type="checkbox" name="caffeinefreecoke" id="FizzyDrink4" tabindex="1">
+        <label for="caffeinefreecoke">Caffeine Free Coke</label>
+    </form>
+</body>
+
+</html>
