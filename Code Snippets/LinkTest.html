@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="=" utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <title> TestPage Accessibility</title>
+</head>
+
+<body>
+    <h1>Link Test</h1>
+    <ol>
+        <li>
+            <div>
+                <label for="plain url link">Plain URL Link</label><br>
+                <a href="https://www.gov.uk/government/publications/paye-starter-checklist">
+                    https://www.gov.uk/government/publications/paye-starter-checklist</a>
+            </div>
+        </li>
+        <li>
+            <label for="link with human readable text">Link with human readable text</label><br>
+            <a href="https://www.gov.uk/government/publications/paye-starter-checklist">Starter Checklist for PAYE
+                (external
+                site)</a>
+        </li>
+        <li>
+            <label for="link with image and no alternative text for the image">Link with image but no alternative text for the image</label><br>
+            <a href="https://www.gov.uk/government/publications/paye-starter-checklist">
+                <img src="Images/gov_uk_logo.png" alt="">
+            </a>
+        </li>
+        <li>
+            <label for="link with image with alternative text for the image">Link with image with alternative text for the image</label><br>
+            <a href="https://www.gov.uk/government/publications/paye-starter-checklist">
+                <img src="Images/gov_uk_logo.png" alt="Starter Checklist for PAYE (external site)">
+            </a>
+        </li>
+    </ol>
+</body>
+
+</html>
