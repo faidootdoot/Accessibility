@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      main {
+        margin: 0;
+        padding: 5px;
+        background-color: lightgray;
+      }
+
+      form > label {
+        display: inline;
+      }
+
+      form input {
+        display: inline;
+      }
+
+      formgroup{
+        display:block;
+        padding-bottom:1rem;
+        border-style:inset;
+      }
+
+      form button {
+        display: block;
+      }
+    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <title>Application Form : Testpage Accessibility</title>
+    <h1>Application Form</h1>
+  </head>
+
+  <body>
+    <main>
+      <form action="">
+        <formgroup>
+          <p>Notice: Putting a placeholder, NVDA reads the placeholder to make it obvious what the user should do</p>
+          <label for="firstname-input"  aria-labelledby="firstname">First name:</label>
+          <input
+            type="text"
+            id="firstname-input"
+            name="firstname"
+            placeholder="Please enter a firstname"
+          />
+        </formgroup>
+
+        <formgroup>
+          <p>Notice: Surname without a placeholder, NVDA reads the label so aria mark up is not required</p>
+        <label for="surname-input" >Surname:</label>
+        <input
+          type="text"
+          id="surname-input"
+          name="surname"          
+        />
+      </formgroup>
+
+      <formgroup>
+        <!--Geolocation-->
+        <!--https://uxmovement.com/forms/bad-practices-on-phone-number-form-fields/-->
+        <p>Notice: Input without a placeholder but label is not linked up, NVDA reads the placeholder of numbers without label. <br/>
+          Need link the label to the input id.  No need to add aria label to the input.
+        </p>
+        <label>Mobile:</label>
+        <input
+          type="tel"
+          id="mobile-input"
+          name="mobile"
+          placeholder="e.g.07777 222 333"
+        />
+        
+      </formgroup>
+
+        <formgroup>
+        <p>Notice: irrelevant and incorrect aria labels can cause confusion.<br/>
+        </p>
+        <button type="reset" aria-label="Exit">Cancel</button>
+
+        <button type="submit">Submit</button>
+        
+      </formgroup>
+      </form>
+    </main>
+  </body>
+</html>
