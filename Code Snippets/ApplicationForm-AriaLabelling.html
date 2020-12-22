@@ -16,10 +16,13 @@
         display: inline;
       }
 
-      formgroup{
+      form > formgroup {
+        display: block;
+        padding-bottom: 1rem;
+        border-style: inset;
+      }
+      form span{
         display:block;
-        padding-bottom:1rem;
-        border-style:inset;
       }
 
       form button {
@@ -36,8 +39,13 @@
     <main>
       <form action="">
         <formgroup>
-          <p>Notice: Putting a placeholder, NVDA reads the placeholder to make it obvious what the user should do</p>
-          <label for="firstname-input"  aria-labelledby="firstname">First name:</label>
+          <p>
+            Notice: Putting a placeholder, NVDA reads the placeholder to make it
+            obvious what the user should do
+          </p>
+          <label for="firstname-input" aria-labelledby="firstname"
+            >First name:</label
+          >
           <input
             type="text"
             id="firstname-input"
@@ -47,39 +55,52 @@
         </formgroup>
 
         <formgroup>
-          <p>Notice: Surname without a placeholder, NVDA reads the label so aria mark up is not required</p>
-        <label for="surname-input" >Surname:</label>
-        <input
-          type="text"
-          id="surname-input"
-          name="surname"          
-        />
-      </formgroup>
+          <p>
+            Notice: Surname without a placeholder, NVDA reads the label so aria
+            mark up is not required
+          </p>
+          <label for="surname-input">Surname:</label>
+          <input type="text" id="surname-input" name="surname" />
+        </formgroup>
 
-      <formgroup>
-        <!--Geolocation-->
-        <!--https://uxmovement.com/forms/bad-practices-on-phone-number-form-fields/-->
-        <p>Notice: Input without a placeholder but label is not linked up, NVDA reads the placeholder of numbers without label. <br/>
-          Need link the label to the input id.  No need to add aria label to the input.
-        </p>
-        <label>Mobile:</label>
-        <input
-          type="tel"
-          id="mobile-input"
-          name="mobile"
-          placeholder="e.g.07777 222 333"
-        />
         
-      </formgroup>
+        <formgroup>
+          <p>
+            Notice: Using aria-describedby the description is read.
+          </p>
+          <span id ="legal-surname-description">
+            Legal surname will be used on your legal documents but not anywhere else.
+          </span>
+          <label for="legal-surname-input">Legal Surname:</label>
+          <input type="text" id="legal-surname-input" name="legal-surname" aria-describedby="legal-surname-description" />
+        </formgroup>
 
         <formgroup>
-        <p>Notice: irrelevant and incorrect aria labels can cause confusion.<br/>
-        </p>
-        <button type="reset" aria-label="Exit">Cancel</button>
+          <!--Geolocation-->
+          <!--https://uxmovement.com/forms/bad-practices-on-phone-number-form-fields/-->
+          <p>
+            Notice: Input without a placeholder but label is not linked up, NVDA
+            reads the placeholder of numbers without label. <br />
+            Need link the label to the input id. No need to add aria label to
+            the input.
+          </p>
+          <label>Mobile:</label>
+          <input
+            type="tel"
+            id="mobile-input"
+            name="mobile"
+            placeholder="e.g.07777 222 333"
+          />
+        </formgroup>
 
-        <button type="submit">Submit</button>
-        
-      </formgroup>
+        <formgroup>
+          <p>
+            Notice: irrelevant and incorrect aria labels can cause confusion.<br />
+          </p>
+          <button type="reset" aria-label="Exit">Cancel</button>
+
+          <button type="submit">Submit</button>
+        </formgroup>
       </form>
     </main>
   </body>
