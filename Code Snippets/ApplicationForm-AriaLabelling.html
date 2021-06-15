@@ -63,7 +63,6 @@
           <input type="text" id="surname-input" name="surname" />
         </formgroup>
 
-        
         <formgroup>
           <p>
             Notice: Using aria-describedby the description is read.
@@ -93,6 +92,36 @@
           />
         </formgroup>
 
+        
+        <formgroup>
+          <!--Geolocation-->
+          <!--https://uxmovement.com/forms/bad-practices-on-phone-number-form-fields/-->
+          <p>
+            Notice: Input with placeholder without label and not descriptive title attribute
+          </p>
+          <input
+          type="text"
+            id="verification-code-input0"
+            name="shortcode"
+            placeholder="Verification Code"
+          />
+        </formgroup>
+
+        <formgroup>
+          <!--Geolocation-->
+          <!--https://uxmovement.com/forms/bad-practices-on-phone-number-form-fields/-->
+          <p>
+            Notice: Input with placeholder without label but with descriptive title attribute
+          </p>
+          <input
+          title="Enter Verification Code"
+          type="text"
+            id="verification-code-input1"
+            name="shortcode"
+            placeholder="Verification Code"
+          />
+        </formgroup>
+
         <formgroup>
           <p>
             Notice: irrelevant and incorrect aria labels can cause confusion.<br />
@@ -101,7 +130,50 @@
 
           <button type="submit">Submit</button>
         </formgroup>
+
+      <formgroup>
+        <div class="form-group">
+          Taken from bulk mail subscription website<br/>
+          <label>
+          First name
+          <span class="asteriskField">*</span>
+          </label>
+          <div>
+          <input class="textinput textInput form-control text-box single-line" data-val="true" data-val-length="The field first name must be a string with a maximum length of 200." data-val-length-max="200" data-val-required="The first name field is required." id="Forename" name="Forename" type="text" value="">
+          <span class="field-validation-valid text-danger" data-valmsg-for="Forename" data-valmsg-replace="true"></span>
+          </div>
+        </div>
+      </formgroup>
+  
+        <formgroup>
+          Experimenting with the bulkmail subscription form, simplifying and playing with label for <br/>
+          <label>
+            What You Forget Gauri
+          </label>
+          <div>
+            <label for="Ohno">
+              What You Forget ED
+            </label>
+            <input id="Ohno" >
+            <span > You got to enter something here 1 </span>
+
+            
+            
+            <input id="DOB" >
+
+            <label for="DOB">
+              DOB
+            </label>
+            <span > I want your real DOB </span>
+          </div>
+        </formgroup>
+
       </form>
+
+      
+     
+
+      <!--https://webaim.org/techniques/forms/advanced#multiple-->
     </main>
   </body>
 </html>
