@@ -1,4 +1,5 @@
-import {faker} from '../node_modules/@faker-js/faker'
+//import {faker} from '../node_modules/@faker-js/faker'
+import { faker } from '@faker-js/faker';
 
 let  goButton = document.getElementById('Go');
 let  outputLabel = document.getElementById('output');
