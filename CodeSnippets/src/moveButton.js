@@ -6,7 +6,7 @@ goButton.addEventListener("click", updateLabel);
 
 function updateLabel(){
 
-    outputLabel.innerText = Math.Floor(Math.random()*1000)
+    outputLabel.innerText = Math.floor(Math.random()*1000)
  
 }
 
